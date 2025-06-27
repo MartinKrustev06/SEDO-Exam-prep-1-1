@@ -10,6 +10,14 @@ function multiply(a, b) {
   return a * b;
 }
 
+
+function calculateAndDisplay(fn) {
+  const a = Number(document.getElementById('a').value);
+  const b = Number(document.getElementById('b').value);
+  document.getElementById('result').textContent = fn(a, b);
+}
+
+
 function calculateAndDisplay(fn) {
   const rawA = document.getElementById('a').value;
   const rawB = document.getElementById('b').value;
@@ -29,4 +37,3 @@ function calculateAndDisplay(fn) {
   document.getElementById(`btn-${op}`)
     .addEventListener('click', () => calculateAndDisplay(window[op]));
 });
-
